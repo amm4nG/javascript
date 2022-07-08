@@ -8,11 +8,17 @@ class Manusia{
     Tidur(){
         console.log(`${this.name} bisa tidur`)
     }
-    makanMakan() {
-        const makan = this.Makan()
-        return makan
+}
+
+//inherithence atau class turunan
+class ManusiaMilenial extends Manusia{
+    constructor(name){
+        super(name)
+    }
+    Healing(){
+        console.log(`${this.name} pergi healing`)
     }
 }
-const manusia = new Manusia("Ismail")
-manusia.makanMakan()
+const manusia = new ManusiaMilenial("Ismail")
 manusia.Tidur()
+manusia.Healing()
