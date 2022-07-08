@@ -12,13 +12,15 @@ class Manusia{
 
 //inherithence atau class turunan
 class ManusiaMilenial extends Manusia{
-    constructor(name){
+    //overidding constructor/menambah parameter pada constructor
+    constructor(name, username){
         super(name)
+        this.username = username
     }
     Healing(){
-        console.log(`${this.name} pergi healing`)
+        console.log(`${this.username} pergi healing`)
     }
 }
-const manusia = new ManusiaMilenial("Ismail")
+const manusia = new ManusiaMilenial("Ismail", "ismail15")
 manusia.Tidur()
 manusia.Healing()
