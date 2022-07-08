@@ -20,6 +20,11 @@ class ManusiaMilenial extends Manusia{
     Healing(){
         console.log(`${this.username} pergi healing`)
     }
+    sendMessage(msg, to) {
+        // super.methodName(...) digunakan untuk memanggil parent method.
+        super.sendMessage(msg, to);
+        console.log('Send by WA');
+    }
 }
 const manusia = new ManusiaMilenial("Ismail", "ismail15")
 manusia.Tidur()
